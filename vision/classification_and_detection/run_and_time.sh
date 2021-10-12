@@ -16,11 +16,14 @@ if [ ! -d $OUTPUT_DIR ]; then
 fi
 
 image=mlperf-infer-imgclassify-$device
-docker build  -t $image -f Dockerfile.$device .
+# docker build  -t $image -f Dockerfile.$device . --no-cache
+docker pull cr.myelintek.com/mlcommon/$image
+docker tag cr.myelintek.com/mlcommon/$image $image
 opts="--mlperf_conf ./mlperf.conf --profile $profile $common_opt --model $model_path \
     --dataset-path $DATA_DIR --output $OUTPUT_DIR $extra_args $EXTRA_OPS $@"
 
-docker run $runtime -e opts="$opts" \
+# docker run $runtime -e opts="$opts" \
+docker run $runtime --rm -e opts="$opts" \
     -v $DATA_DIR:$DATA_DIR -v $MODEL_DIR:$MODEL_DIR -v `pwd`:/mlperf \
     -v $OUTPUT_DIR:/output -v /proc:/host_proc \
     -t $image:latest /mlperf/run_helper.sh 2>&1 | tee $OUTPUT_DIR/output.txt

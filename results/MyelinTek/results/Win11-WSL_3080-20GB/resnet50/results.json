@@ -1,0 +1,22 @@
+{
+    "TestScenario.Offline": {
+        "count": 528000,
+        "good_items": 0,
+        "mean": 354.9975251000605,
+        "percentiles": {
+            "50.0": 354.8558798,
+            "80.0": 561.3241627600074,
+            "90.0": 630.50556935,
+            "95.0": 664.58031436,
+            "99.0": 691.863748638,
+            "99.9": 698.4105584
+        },
+        "qps": 755.7395160235692,
+        "took": 698.6534233093262,
+        "total_items": 528000
+    },
+    "cmdline": "Namespace(accuracy=False, backend='tensorflow', cache=0, count=None, data_format=None, dataset='imagenet', dataset_list=None, dataset_path='/mnt/c/imagenet', debug=False, find_peak_performance=False, inputs=['input_tensor:0'], max_batchsize=32, max_latency=None, mlperf_conf='./mlperf.conf', model='/home/mlsteam/inference/vision/classification_and_detection/resnet50_v1.pb', model_name='resnet50', output='/output', outputs=['ArgMax:0'], profile='resnet50-tf', qps=800, samples_per_query=None, scenario='Offline', threads=16, time=None, user_conf='user.conf')",
+    "runtime": "tensorflow",
+    "time": 1634028299,
+    "version": "2.4.3/v2.4.2-142-g72bb4c22adb"
+}

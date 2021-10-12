@@ -1,0 +1,58 @@
+Clearing caches.
+3
+STARTING RUN AT 2021-10-12 08:43:50 AM
+INFO:main:Namespace(accuracy=False, backend='tensorflow', cache=0, count=None, data_format=None, dataset='imagenet', dataset_list=None, dataset_path='/mnt/c/imagenet', debug=False, find_peak_performance=False, inputs=['input_tensor:0'], max_batchsize=32, max_latency=None, mlperf_conf='./mlperf.conf', model='/home/mlsteam/inference/vision/classification_and_detection/resnet50_v1.pb', model_name='resnet50', output='/output', outputs=['ArgMax:0'], profile='resnet50-tf', qps=800, samples_per_query=None, scenario='Offline', threads=16, time=None, user_conf='user.conf')
+2021-10-12 08:43:50.961122: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+INFO:imagenet:loaded 50000 images, cache=0, took=23.6sec
+WARNING:tensorflow:From /mlperf/python/backend_tf.py:47: FastGFile.__init__ (from tensorflow.python.platform.gfile) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.gfile.GFile.
+WARNING:tensorflow:From /opt/anaconda3/lib/python3.7/site-packages/tensorflow/python/tools/strip_unused_lib.py:88: extract_sub_graph (from tensorflow.python.framework.graph_util_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.compat.v1.graph_util.extract_sub_graph`
+WARNING:tensorflow:From /opt/anaconda3/lib/python3.7/site-packages/tensorflow/python/tools/optimize_for_inference_lib.py:117: remove_training_nodes (from tensorflow.python.framework.graph_util_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.compat.v1.graph_util.remove_training_nodes`
+2021-10-12 08:44:58.378980: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2021-10-12 08:44:58.381862: I tensorflow/compiler/jit/xla_gpu_device.cc:99] Not creating XLA devices, tf_xla_enable_xla_devices not set
+2021-10-12 08:44:58.384373: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcuda.so.1
+2021-10-12 08:44:58.484373: E tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:927] could not open file to read NUMA node: /sys/bus/pci/devices/0000:02:00.0/numa_node
+Your kernel may have been built without NUMA support.
+2021-10-12 08:44:58.484436: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1720] Found device 0 with properties: 
+pciBusID: 0000:02:00.0 name: NVIDIA GeForce RTX 3080 computeCapability: 8.6
+coreClock: 1.71GHz coreCount: 68 deviceMemorySize: 20.00GiB deviceMemoryBandwidth: 707.88GiB/s
+2021-10-12 08:44:58.484479: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+2021-10-12 08:44:58.502693: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublas.so.11
+2021-10-12 08:44:58.502789: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublasLt.so.11
+2021-10-12 08:44:58.525702: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcufft.so.10
+2021-10-12 08:44:58.532277: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcurand.so.10
+2021-10-12 08:44:58.583214: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusolver.so.10
+2021-10-12 08:44:58.589288: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusparse.so.11
+2021-10-12 08:44:58.591646: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudnn.so.8
+2021-10-12 08:44:58.592050: E tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:927] could not open file to read NUMA node: /sys/bus/pci/devices/0000:02:00.0/numa_node
+Your kernel may have been built without NUMA support.
+2021-10-12 08:44:58.592280: E tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:927] could not open file to read NUMA node: /sys/bus/pci/devices/0000:02:00.0/numa_node
+Your kernel may have been built without NUMA support.
+2021-10-12 08:44:58.592807: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1862] Adding visible gpu devices: 0
+2021-10-12 08:44:58.593324: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+2021-10-12 08:44:59.860689: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1261] Device interconnect StreamExecutor with strength 1 edge matrix:
+2021-10-12 08:44:59.860751: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1267]      0 
+2021-10-12 08:44:59.860775: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1280] 0:   N 
+2021-10-12 08:44:59.862300: E tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:927] could not open file to read NUMA node: /sys/bus/pci/devices/0000:02:00.0/numa_node
+Your kernel may have been built without NUMA support.
+2021-10-12 08:44:59.862348: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1489] Could not identify NUMA node of platform GPU id 0, defaulting to 0.  Your kernel may not have been built with NUMA support.
+2021-10-12 08:44:59.863052: E tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:927] could not open file to read NUMA node: /sys/bus/pci/devices/0000:02:00.0/numa_node
+Your kernel may have been built without NUMA support.
+2021-10-12 08:44:59.863311: E tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:927] could not open file to read NUMA node: /sys/bus/pci/devices/0000:02:00.0/numa_node
+Your kernel may have been built without NUMA support.
+2021-10-12 08:44:59.863368: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1406] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 18003 MB memory) -> physical GPU (device: 0, name: NVIDIA GeForce RTX 3080, pci bus id: 0000:02:00.0, compute capability: 8.6)
+2021-10-12 08:44:59.877947: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:196] None of the MLIR optimization passes are enabled (registered 0 passes)
+2021-10-12 08:44:59.886898: I tensorflow/core/platform/profile_utils/cpu_utils.cc:112] CPU Frequency: 2495995000 Hz
+2021-10-12 08:45:01.013819: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublas.so.11
+2021-10-12 08:45:02.159418: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublasLt.so.11
+2021-10-12 08:45:02.172234: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudnn.so.8
+2021-10-12 08:45:08.648178: I tensorflow/stream_executor/cuda/cuda_blas.cc:1838] TensorFloat-32 will be used for the matrix multiplication. This will only be logged once.
+INFO:main:starting TestScenario.Offline
+TestScenario.Offline qps=755.74, mean=354.9975, time=698.653, queries=528000, tiles=50.0:354.8559,80.0:561.3242,90.0:630.5056,95.0:664.5803,99.0:691.8637,99.9:698.4106
+ENDING RUN AT 2021-10-12 08:56:51 AM
